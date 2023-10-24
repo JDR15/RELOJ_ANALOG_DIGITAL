@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.reloj-analogo {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/RelojFondo.png");
+    background-size: cover;
+    border: 1rem solid rgb(0, 103, 163);
+    border-radius: 50vh;
+    box-shadow: inset 0px 0px 20px 5px rgb(0, 103, 163);
+}
+
+.reloj-analogo::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(129, 197, 237);
+    border-radius: 50vh;
+    z-index: 10000;
+}
+
+.hora {
+    width: 140px;
+    height: 140px;
+}
+
+.minuto {
+    width: 220px;
+    height: 220px;
+}
+
+.segundo {
+    width: 250px;
+    height: 250px;
+}
+
+.hora::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 70px;
+    background: beige;
+    z-index: 10;
+    border-radius: 50vh;
+}
+
+.minuto::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    z-index: 11;
+    border-radius: 50vh;
+}
+
+.segundo::before {
+    content: '';
+    position: absolute;
+    width: 1.8px;
+    height: 150px;
+    background: rgb(0, 103, 163);
+    z-index: 11;
+    border-radius: 50vh;
+}
+
+.hora,
+.minuto,
+.segundo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 20vh;
+}
+
+.reloj-digital {
+    border: 1px solid rgb(0, 103, 163);
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: rgb(213, 226, 228);
+    position: absolute; /* el elemento se posicionará de forma absoluta en relación con su contenedor */
+    bottom: 60%; /* se utiliza para establecer la distancia entre el borde inferior del elemento y el borde inferior del contenedor */
+    left: 50%; 
+    margin-left: -100px;
+}
